@@ -115,6 +115,25 @@ This project aims to develop a web platform for University Training Management S
 | 39  | feedbacks  | Đánh giá giảng viên / môn học |
 | 40  | attendance | Điểm danh sinh viên           |
 
+**XIV. NHÓM GỬI EMAIL – LIÊN LẠC TỰ ĐỘNG**
+STT	Tên bảng	Chức năng
+1	email_templates	Lưu mẫu email (tiêu đề, nội dung HTML)
+2	email_logs	Lưu lịch sử email đã gửi
+3	email_queue	Hàng đợi email chờ gửi
+4	smtp_configs	Cấu hình máy chủ gửi mail
+5	email_attachments	Lưu file đính kèm
+6	email_groups	Nhóm người nhận (lớp, khoa…)
+
+3. Bảng sự kiện kích hoạt gửi email
+STT	Sự kiện	Email gửi cho
+1	Sinh viên đăng ký học phần	Sinh viên
+2	Hủy lớp học phần	Sinh viên đã đăng ký
+3	Nhập điểm	Sinh viên
+4	Công bố lịch thi	Sinh viên
+5	Tạo hóa đơn học phí	Sinh viên
+6	Thanh toán học phí	Sinh viên
+7	Xét tốt nghiệp	Sinh viên
+8	Phân công giảng dạy	Giảng viên
 
 ### Sprint 1
 
