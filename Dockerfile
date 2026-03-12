@@ -1,15 +1,13 @@
 # Stage 1: Build the application
-FROM eclipse-temurin:21-jdk-jammy AS build
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /app
-COPY mvnw pom.xml ./
-# Make mvnw executable
-RUN chmod +x mvnw
+COPY pom.xml ./
 # Download dependencies (this will be cached if pom.xml doesn't change)
-RUN ./mvnw dependency:go-offline
+RUN mvn dependency:go-offline
 
 COPY src ./src
 # Build the application
-RUN ./mvnw clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 # Stage 2: Create the runtime image
 FROM eclipse-temurin:21-jre-jammy
